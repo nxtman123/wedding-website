@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kirsten &amp; Kurtis — Save the Date</title>
+    <title>Kirsten &amp; Kurtis — Wedding Invitation</title>
     <style>
       *,
       *::before,
@@ -15,7 +15,7 @@
 
       html,
       body {
-        height: 100%;
+        min-height: 100%;
       }
 
       body {
@@ -34,6 +34,7 @@
         max-width: 480px;
         padding: 20px;
         position: relative;
+        margin: 1rem auto;
       }
 
       .card-border {
@@ -51,7 +52,7 @@
         gap: 0;
       }
 
-      .save-the-date {
+      .eyebrow {
         font-size: clamp(0.75rem, 2.5vw, 1rem);
         color: #fff15c;
         letter-spacing: 0.5em;
@@ -60,6 +61,7 @@
         font-style: normal;
         font-weight: 400;
         margin-bottom: 1rem;
+        text-indent: 0.5em;
       }
 
       .rule {
@@ -98,6 +100,8 @@
         text-align: center;
         margin: 0.5rem 0 1rem;
         font-weight: 400;
+        max-width: 28ch;
+        line-height: 1.4;
       }
 
       .photos {
@@ -116,52 +120,99 @@
         filter: grayscale(100%);
       }
 
-      .date-section {
+      .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        margin: 1rem 0 0.25rem;
+        width: 100%;
+        margin: 0.75rem 0 0.25rem;
+      }
+
+      .section-title {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        font-style: italic;
+        color: #faf8f5;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 0.6rem;
       }
 
       .date-text {
-        font-size: clamp(1.2rem, 4vw, 1.75rem);
+        font-size: clamp(1.1rem, 3.6vw, 1.55rem);
         color: #fff15c;
         font-weight: 400;
         font-style: normal;
         letter-spacing: 0.03em;
+        line-height: 1.3;
       }
 
-      .dots {
-        display: flex;
-        justify-content: center;
-        gap: 2.5rem;
-        margin: 0.6rem 0;
+      .detail-time {
+        font-size: clamp(0.9rem, 2.6vw, 1.1rem);
+        font-style: italic;
+        color: #b789be;
+        letter-spacing: 0.08em;
+        line-height: 1.5;
+        margin-top: 0.15rem;
       }
 
-      .dots span {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: #b789be;
-        display: block;
+      .venue {
+        font-size: clamp(1.05rem, 3.2vw, 1.35rem);
+        font-style: italic;
+        color: #faf8f5;
+        font-weight: 400;
+        line-height: 1.3;
+        margin-top: 0.7rem;
       }
 
-      .location {
+      .address {
         font-size: clamp(0.6rem, 1.8vw, 0.75rem);
         color: #fff15c;
-        letter-spacing: 0.4em;
+        letter-spacing: 0.3em;
         text-transform: uppercase;
         text-align: center;
         font-weight: 400;
-        font-style: normal;
-        margin-bottom: 1rem;
+        line-height: 1.9;
+        text-indent: 0.3em;
+        margin-top: 0.35rem;
       }
 
-      .footer-text {
-        font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+      .note {
+        font-size: clamp(0.8rem, 2.3vw, 0.95rem);
         font-style: italic;
         color: #b789be;
-        letter-spacing: 0.15em;
+        letter-spacing: 0.04em;
         text-align: center;
-        font-weight: 400;
+        line-height: 1.45;
+        max-width: 34ch;
+        margin-top: 0.9rem;
+      }
+
+      .bike-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.9rem;
+        width: 100%;
+        margin: 1.75rem 0 1.25rem;
+      }
+
+      .bike-divider .bike-rule {
+        flex: 1;
+        height: 1.5px;
+        background: #fff15c;
+      }
+
+      .bike {
+        width: clamp(46px, 13vw, 58px);
+        height: auto;
+        display: block;
+        flex: none;
+        fill: #fff15c;
+      }
+
+      .bike path {
+        fill: #fff15c;
       }
 
       .rsvp {
@@ -189,7 +240,7 @@
     <div class="card">
       <div class="card-border">
         <div class="card-inner">
-          <p class="save-the-date">Save the Date</p>
+          <p class="eyebrow">You are invited</p>
 
           <div class="rule"></div>
 
@@ -199,7 +250,9 @@
             <div class="name">Kurtis</div>
           </div>
 
-          <p class="subtitle">are getting married</p>
+          <p class="subtitle">
+            request the honour of your presence at their wedding
+          </p>
 
           <div class="photos">
             <img src="engagement-1-square-2.jpg" alt="Kirsten and Kurtis" />
@@ -209,19 +262,41 @@
 
           <div class="rule"></div>
 
-          <div class="date-section">
-            <p class="date-text">October 3, 2026</p>
+          <div class="section">
+            <p class="section-title">Ceremony</p>
+            <p class="date-text">Saturday, the third of October</p>
+            <p class="date-text">two thousand twenty-six</p>
+            <p class="detail-time">at one thirty in the afternoon</p>
+            <p class="venue">Commons Church</p>
+            <p class="address">2404 Kensington Road NW<br />Calgary, Alberta</p>
+            <p class="note">please arrive at least fifteen minutes early</p>
           </div>
 
-          <div class="dots">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="bike-divider">
+            <span class="bike-rule"></span>
+            <svg
+              class="bike"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="51.73 102.924 10.841 4.97"
+              role="img"
+              aria-label="Tandem bicycle"
+            >
+              <path d="m 59.486195,103.42443 a 0.13636308,0.13636308 0 0 0 -0.136406,0.13641 0.13636308,0.13636308 0 0 0 0.136406,0.1364 h 0.354492 c 0.0083,0.0855 0.0185,0.17828 0.03116,0.2769 l -2.460395,0.0253 -0.08079,-0.30122 h 0.05304 a 0.13636308,0.13636308 0 0 0 0.136363,-0.13641 0.13636308,0.13636308 0 0 0 -0.136363,-0.13623 H 57.15301 56.858223 a 0.1363767,0.1363767 0 0 0 0,0.27264 h 0.190075 l 0.08154,0.30411 -2.098357,0.0216 -0.08718,-0.32573 h 0.053 a 0.13636308,0.13636308 0 0 0 0.136408,-0.13641 0.13636308,0.13636308 0 0 0 -0.136408,-0.13623 h -0.230635 -0.294922 a 0.1363767,0.1363767 0 0 0 0,0.27264 h 0.190208 l 0.117319,0.43763 -0.432526,0.62726 c -0.207907,-0.12088 -0.449312,-0.19016 -0.706497,-0.19016 -0.777445,0 -1.410594,0.63315 -1.410594,1.41059 0,0.77745 0.633149,1.41064 1.410594,1.41064 0.621896,0 1.151491,-0.40514 1.338508,-0.96519 l 0.483795,0.0914 a 0.1363767,0.1363767 0 0 0 0.0091,0.001 0.13636308,0.13636308 0 0 0 0.01003,6e-4 0.1363767,0.1363767 0 0 0 0.0062,2.7e-4 h 2.386353 a 0.1363767,0.1363767 0 0 0 6.08e-4,-4e-5 0.13636308,0.13636308 0 0 0 0.03276,-0.004 0.13636308,0.13636308 0 0 0 0.0026,-6.1e-4 0.1363767,0.1363767 0 0 0 0.0024,-6.1e-4 0.13636308,0.13636308 0 0 0 0.0142,-0.005 0.1363767,0.1363767 0 0 0 0.0036,-0.002 0.13636308,0.13636308 0 0 0 0.01256,-0.006 0.1363767,0.1363767 0 0 0 0.0033,-0.002 0.13636308,0.13636308 0 0 0 0.01118,-0.008 0.1363767,0.1363767 0 0 0 0.0038,-0.003 0.13636308,0.13636308 0 0 0 0.0098,-0.009 0.1363767,0.1363767 0 0 0 0.0022,-0.002 l 1.965148,-2.07701 c 0.01974,0.10708 0.04258,0.21753 0.06902,0.33004 -0.45021,0.23597 -0.758299,0.70806 -0.758299,1.25035 0,0.77744 0.63315,1.41064 1.410595,1.41064 0.777446,0 1.410638,-0.6332 1.410638,-1.41064 0,-0.77745 -0.633192,-1.4106 -1.410638,-1.4106 -0.136946,0 -0.269387,0.0197 -0.394708,0.0563 -0.04157,-0.18011 -0.07411,-0.35531 -0.09956,-0.51864 a 0.1363767,0.1363767 0 0 0 -0.0067,-0.0441 c -0.02921,-0.19461 -0.04832,-0.37109 -0.06081,-0.51727 l -0.01056,-0.12482 z m -0.04439,0.82701 -1.744399,0.87468 -0.215331,-0.85448 z m -2.240313,0.0231 0.246136,0.97682 -1.869044,0.93719 -0.476694,-1.89239 z m -2.332867,0.21222 0.43497,1.72616 -0.264115,-0.0499 c 0.0075,-0.0587 0.01137,-0.11863 0.01137,-0.17938 0,-0.42254 -0.187016,-0.80244 -0.482597,-1.06125 z m 4.528036,0.0924 -1.450721,1.5332 -0.180308,-0.71542 z m -5.756413,0.26647 c 0.200463,0 0.388557,0.0514 0.551845,0.14182 l -0.669786,0.97132 a 0.1363767,0.1363767 0 0 0 0.08691,0.21138 l 1.099117,0.20774 c -0.1598,0.43475 -0.576772,0.74352 -1.068089,0.74352 -0.630053,0 -1.137823,-0.50777 -1.137823,-1.13782 0,-0.63006 0.50777,-1.13796 1.137823,-1.13796 z m 7.019636,0 c 0.630054,0 1.138001,0.5079 1.138001,1.13796 0,0.63005 -0.507947,1.13782 -1.138001,1.13782 -0.630053,0 -1.137779,-0.50777 -1.137779,-1.13782 0,-0.4171 0.222492,-0.78065 0.555706,-0.97878 0.105888,0.37341 0.254814,0.75664 0.465818,1.10227 a 0.13636308,0.13636308 0 0 0 0.187411,0.0454 0.13636308,0.13636308 0 0 0 0.04528,-0.18755 c -0.199241,-0.32636 -0.34201,-0.70236 -0.44429,-1.07173 0.103759,-0.031 0.213796,-0.0476 0.327858,-0.0476 z m -6.246778,0.30162 c 0.224637,0.20767 0.364966,0.50513 0.364966,0.83634 0,0.0435 -0.0024,0.0864 -0.0071,0.12859 l -0.905181,-0.17121 z m 3.102792,0.37491 0.183416,0.72803 h -1.635379 z" />
+            </svg>
+            <span class="bike-rule"></span>
           </div>
 
-          <p class="location">Calgary, Alberta</p>
-
-          <p class="footer-text">formal invitation to follow</p>
+          <div class="section">
+            <p class="section-title">Reception</p>
+            <p class="detail-time">Cocktail hour at five o'clock</p>
+            <p class="detail-time">dinner beginning at six o'clock</p>
+            <p class="venue">Silver Springs Golf &amp; Country Club</p>
+            <p class="address">1600 Varsity Estates Dr NW<br />Calgary, Alberta</p>
+            <p class="note">
+              Although we love your kids, we will be having an adults-only
+              reception. Thank you for your understanding.
+            </p>
+          </div>
 
           <a
             class="rsvp"
