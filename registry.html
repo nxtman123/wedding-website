@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kirsten &amp; Kurtis — Wedding Invitation</title>
+    <title>Kirsten &amp; Kurtis — Registry</title>
     <style>
       *,
       *::before,
@@ -84,15 +84,6 @@
         font-weight: 400;
       }
 
-      .names .parents {
-        font-size: clamp(0.8rem, 2.3vw, 0.95rem);
-        font-style: italic;
-        color: #b789be;
-        letter-spacing: 0.04em;
-        line-height: 1.45;
-        margin-top: 0.3rem;
-      }
-
       .names .ampersand {
         font-size: clamp(1.5rem, 4vw, 2rem);
         font-style: italic;
@@ -109,24 +100,8 @@
         text-align: center;
         margin: 0.5rem 0 1rem;
         font-weight: 400;
-        max-width: 28ch;
-        line-height: 1.3;
-      }
-
-      .photos {
-        display: flex;
-        gap: clamp(4px, 1.5vw, 8px);
-        width: 100%;
-        margin: 0.5rem 0;
-      }
-
-      .photos img {
-        flex: 1;
-        width: 0;
-        aspect-ratio: 1;
-        object-fit: cover;
-        display: block;
-        filter: grayscale(100%);
+        max-width: 34ch;
+        line-height: 1.4;
       }
 
       .section {
@@ -148,24 +123,6 @@
         text-indent: 0.5em;
         line-height: 1.2;
         margin-bottom: 0.9rem;
-      }
-
-      .date-text {
-        font-size: clamp(1.1rem, 3.6vw, 1.55rem);
-        color: #faf8f5;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: 0.03em;
-        line-height: 1.3;
-      }
-
-      .detail-time {
-        font-size: clamp(0.9rem, 2.6vw, 1.1rem);
-        font-style: italic;
-        color: #b789be;
-        letter-spacing: 0.08em;
-        line-height: 1.5;
-        margin-top: 0.15rem;
       }
 
       .venue {
@@ -195,8 +152,8 @@
         color: #b789be;
         letter-spacing: 0.04em;
         text-align: center;
-        line-height: 1.45;
-        max-width: 34ch;
+        line-height: 1.55;
+        max-width: 40ch;
         margin-top: 0.9rem;
       }
 
@@ -227,10 +184,10 @@
         fill: #fff15c;
       }
 
-      .rsvp {
+      .link-btn {
         display: inline-block;
-        margin-top: 1.75rem;
-        padding: 0.7rem 2.75rem;
+        margin-top: 1.25rem;
+        padding: 0.7rem 2rem;
         border: 1.5px solid #fff15c;
         color: #fff15c;
         text-decoration: none;
@@ -238,27 +195,31 @@
         letter-spacing: 0.4em;
         text-transform: uppercase;
         text-indent: 0.4em;
+        text-align: center;
         transition:
           background 0.25s ease,
           color 0.25s ease;
       }
 
-      .rsvp:hover,
-      .rsvp:focus {
+      .link-btn:hover,
+      .link-btn:focus {
         background: #fff15c;
         color: #5d3b7d;
       }
 
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 1.75rem;
+      .back-link {
+        margin-top: 2rem;
+        font-size: clamp(0.7rem, 2vw, 0.85rem);
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        text-indent: 0.3em;
+        color: #b789be;
+        text-decoration: none;
       }
 
-      .actions .rsvp {
-        margin-top: 0;
+      .back-link:hover,
+      .back-link:focus {
+        color: #fff15c;
       }
     </style>
   </head>
@@ -266,38 +227,40 @@
     <div class="card">
       <div class="card-border">
         <div class="card-inner">
-          <p class="eyebrow">You are invited</p>
+          <p class="eyebrow">Registry</p>
 
           <div class="rule"></div>
 
           <div class="names">
-            <div class="name">Kirsten Bale</div>
-            <p class="parents">daughter of Richard and Ann Bale</p>
+            <div class="name">Kirsten</div>
             <div class="ampersand">&amp;</div>
-            <div class="name">Kurtis Jantzen</div>
-            <p class="parents">son of Leon and Debbie Jantzen</p>
+            <div class="name">Kurtis</div>
           </div>
 
           <p class="subtitle">
-            request the honour of your presence at their wedding
+            Your presence is the greatest gift of all. But if you wish to
+            celebrate us with something more, we have registered at the two
+            places below.
           </p>
-
-          <div class="photos">
-            <img src="engagement-1-square-2.jpg" alt="Kirsten and Kurtis" />
-            <img src="IMG_4053 (1).jpeg" alt="Kirsten and Kurtis" />
-            <img src="IMG_4251 (1).jpeg" alt="Kirsten and Kurtis" />
-          </div>
 
           <div class="rule"></div>
 
           <div class="section">
-            <p class="section-title">Ceremony</p>
-            <p class="date-text">Saturday, the third of October</p>
-            <p class="date-text">two thousand twenty-six</p>
-            <p class="detail-time">at one thirty in the afternoon</p>
-            <p class="venue">Commons Church</p>
-            <p class="address">2404 Kensington Road NW<br />Calgary, Alberta</p>
-            <p class="note">please arrive at least fifteen minutes early</p>
+            <p class="section-title">Our Registries</p>
+            <a
+              class="link-btn"
+              href="https://www.myregistry.com/wedding-registry/kirsten-and-kurtis-vancouver-bc/5577100"
+              target="_blank"
+              rel="noopener"
+              >MyRegistry</a
+            >
+            <a
+              class="link-btn"
+              href="https://www.talkable.com/x/WPrzVT"
+              target="_blank"
+              rel="noopener"
+              >Crate &amp; Barrel</a
+            >
           </div>
 
           <div class="bike-divider">
@@ -317,29 +280,21 @@
           </div>
 
           <div class="section">
-            <p class="section-title">Reception</p>
-            <p class="detail-time">Cocktail hour at five o'clock</p>
-            <p class="detail-time">dinner beginning at six o'clock</p>
-            <p class="venue">Silver Springs Golf &amp; Country Club</p>
+            <p class="section-title">Sending a Gift</p>
+            <p class="venue">Kirsten &amp; Kurtis Jantzen</p>
             <p class="address">
-              1600 Varsity Estates Dr NW<br />Calgary, Alberta
+              1405 West 15th Avenue, Unit 316<br />
+              Vancouver, BC V6H 3R2<br />
+              Canada
             </p>
             <p class="note">
-              Although we love your kids, we will be having an adults-only
-              reception,<br />
-              excepting infants<br />
-              Thank you for your understanding.
+              Please address gifts to both of our names. We'll be away for the
+              wedding, so we'll know to save them until we're home. You're also
+              very welcome to bring your gift to the wedding.
             </p>
           </div>
 
-          <div class="actions">
-            <a
-              class="rsvp"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeOJAgiZU86zdG4KEY7oUWUQWHL9grkpslfSRjH2tCXKz8tUw/viewform?usp=publish-editor"
-              >RSVP</a
-            >
-            <a class="rsvp" href="registry.html">Registry</a>
-          </div>
+          <a class="back-link" href="index.html">&larr; Back to Invitation</a>
         </div>
       </div>
     </div>
